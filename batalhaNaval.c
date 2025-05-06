@@ -1,47 +1,47 @@
 #include <stdio.h>
 
-#define TAMANHO  10;
+#define tamanho  10
+   
 
-int tabuleiro[i][j];
+void iniciandoTabuleiro (int tabuleiro[tamanho][tamanho]){
 
-i = TAMANHO;
-j = TAMANHO;    
-
-void iniciandoTabuleiro (int tabuleiro[i][j]){
-
-    for (int i = 0; i < 10; i++){
-        for (int j = 0; j < 10; j++){
+    for (int i = 0; i < tamanho; i++){
+        for (int j = 0; j < tamanho; j++){
 
             tabuleiro[i][j] = 0;
         }
+    
     }
+//navio 1
+tabuleiro [1][0] = 3;
+tabuleiro [2][0] = 3;
+tabuleiro [3][0] = 3;
+
+//navio 2
+tabuleiro [5][6] = 3;
+tabuleiro[6][6] = 3;
+tabuleiro[7][6] = 3;
 
 }
 
-//navio 1
-tabuleiro [1][0];
-tabuleiro [2][0];
-tabuleiro [3][0];
 
-//navio 2
-tabuleiro [5][6];
-tabieiro[6][6];
-tabuleiro[7][6];
+void exibirTabuleiro(int tabuleiro[tamanho][tamanho]){
+    printf("    A B C D E F G H I J \n");
+    for (int i = 0; i < tamanho; i++){
+        printf("%2d  ", i + 1);
 
-void exibirTabuleiro(int tabuleiro[i][j]){
-
-    for (int i = 0; i < 10; i++){
-        printf("%2d", tabuleiro[i]);
-
-        for (int j = 0; j < 10; j++){
-            printf("%d", tabuleiro[j]);
+        for (int j = 0; j < tamanho; j++){
+            printf("%d ", tabuleiro[i][j] );
         }
+        printf("\n");
     }
 
 }
 
 int main (){
 
-    iniciandoTabuleiro(tabuleiro[i][j]);
-    exibirTabuleiro(tabuleiro[i][j]);
+    int tabuleiro[tamanho][tamanho];
+    
+    iniciandoTabuleiro(tabuleiro);
+    exibirTabuleiro(tabuleiro);
 }
