@@ -10,7 +10,8 @@ void iniciandoTabuleiro(int tabuleiro[tamanho][tamanho]) {
                 tabuleiro[linha][coluna] = 3;
             }
             // Preenchendo diagonal secundária
-            else if (linha + coluna == 9) {
+            else if (linha + coluna == 9
+        ) {
                 tabuleiro[linha][coluna] = 3;
             }
             // Preenchendo o restante com água
